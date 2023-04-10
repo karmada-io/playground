@@ -1,0 +1,3 @@
+#!/bin/bash
+
+karmadactl version
