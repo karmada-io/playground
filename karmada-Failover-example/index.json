@@ -1,0 +1,37 @@
+{
+    "title": "Karmada failover example",
+    "description": "Simulate multitype cluster failover through Karmada",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "foreground": "foreground.sh"
+      },
+      "steps": [
+        {
+          "title": "Check member cluster has been joined",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Check workloads has been deployed",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Simulate cluster failure",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        },
+        {
+          "title": "Check the status and quantity distribution of pods and deployments",
+          "text": "step4/text.md"
+        }
+      ],
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }
