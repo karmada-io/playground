@@ -28,9 +28,10 @@ function createCluster() {
     KUBECONFIG=~/config-member1:~/config-member2 kubectl config view --merge --flatten >> ${KUBECONFIG_PATH}/config
     # modify ip
     sed -i "s/${local_ip}/${member_cluster_ip}/g"  config-member1
-    scp config-member1 root@${host_cluster_ip}:$HOME/.kube/config-member1
+    # set StrictHostKeyChecking to no to avoid prompting, the same below
+    scp -o StrictHostKeyChecking=no config-member1 root@${host_cluster_ip}:$HOME/.kube/config-member1
     sed -i "s/${local_ip}/${member_cluster_ip}/g"  config-member2
-    scp config-member2 root@${host_cluster_ip}:$HOME/.kube/config-member2
+    scp -o StrictHostKeyChecking=no config-member2 root@${host_cluster_ip}:$HOME/.kube/config-member2
 EOF
 }
 
@@ -110,12 +111,13 @@ function propagationPolicy() {
 EOF
 }
 
-
 function copyConfigFilesToNode() {
-    scp installKind.sh root@${member_cluster_ip}:~
-    scp createCluster.sh root@${member_cluster_ip}:~
-    scp cluster1.yaml root@${member_cluster_ip}:~
-    scp cluster2.yaml root@${member_cluster_ip}:~
+    scp -o StrictHostKeyChecking=no \
+        installKind.sh \
+        createCluster.sh \
+        cluster1.yaml \
+        cluster2.yaml \
+        root@${member_cluster_ip}:~
 }
 
 kubectl delete node node01
@@ -135,9 +137,9 @@ nginxDeployment
 propagationPolicy
 
 # create cluster in node01 machine
-ssh root@${member_cluster_ip} "bash ~/installKind.sh" &
+ssh -o StrictHostKeyChecking=no root@${member_cluster_ip} "bash ~/installKind.sh" &
 sleep 10
-ssh root@${member_cluster_ip} "bash ~/createCluster.sh" &
+ssh -o StrictHostKeyChecking=no root@${member_cluster_ip} "bash ~/createCluster.sh" &
 sleep 90
 
 # install karmadactl
