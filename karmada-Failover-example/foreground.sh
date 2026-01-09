@@ -145,8 +145,8 @@ sleep 90
 # install karmadactl
 curl -s https://raw.githubusercontent.com/karmada-io/karmada/master/hack/install-cli.sh | sudo bash
 
-# init karmada
-karmadactl init
+# init karmada, and enable Failover feature gate and eviction feature
+karmadactl init --karmada-controller-manager-extra-args="--feature-gates=Failover=true,--enable-no-execute-taint-eviction=true"
 
 # join member clusters
 MEMBER_CLUSTER_NAME=kind-member1

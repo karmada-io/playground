@@ -1,6 +1,6 @@
 {
     "title": "Karmada failover example",
-    "description": "Simulate multitype cluster failover through Karmada",
+    "description": "Simulate multiple cluster failover through Karmada",
     "details": {
       "intro": {
         "text": "intro.md",
