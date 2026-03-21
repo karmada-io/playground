@@ -18,7 +18,7 @@
           "verify": "step2/verify.sh"
         },
         {
-          "title": "Create propagationPolicy and deploy deployment",
+          "title": "Create propagationPolicy and deploy workload",
           "text": "step3/text.md",
           "verify": "step3/verify.sh"
         },

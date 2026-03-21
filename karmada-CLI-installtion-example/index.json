@@ -18,7 +18,7 @@
           "verify": "step2/verify.sh"
         },
         {
-          "title": "initialize karamda",
+          "title": "initialize Karmada",
           "text": "step3/text.md",
           "verify": "step3/verify.sh"
         },

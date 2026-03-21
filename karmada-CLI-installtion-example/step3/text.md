@@ -1,3 +1,3 @@
-### Initialize karamda
+### Initialize Karmada
 
 RUN `karmadactl init`{{exec}}
