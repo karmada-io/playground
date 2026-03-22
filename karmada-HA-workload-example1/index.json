@@ -1,6 +1,6 @@
 {
-  "title": "HA workload deployment1",
-  "description": "propagate workload through karmada duplicated mode",
+  "title": "HA workload deployment duplicated mode",
+  "description": "Propagate workload through Karmada duplicated mode",
     "details": {
       "intro": {
         "text": "intro.md",

@@ -1,6 +1,6 @@
 {
-    "title": "HA workload deployment2",
-    "description": "propagate workload through karmada divided mode",
+    "title": "HA workload deployment — divided mode",
+    "description": "Propagate workload through Karmada divided mode",
     "details": {
       "intro": {
         "text": "intro.md",
@@ -13,7 +13,7 @@
           "verify": "step1/verify.sh"
         },
         {
-          "title": "create deployment",
+          "title": "Create deployment",
           "text": "step2/text.md",
           "verify": "step2/verify.sh"
         },
