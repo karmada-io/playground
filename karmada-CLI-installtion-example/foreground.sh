@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 # variable define
-kind_version=v0.17.0
+kind_version=v0.26.0
 host_cluster_ip=172.30.1.2 #host node where Karmada is located
 member_cluster_ip=172.30.2.2
 local_ip=127.0.0.1

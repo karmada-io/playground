@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 # variable define
-kind_version=v0.17.0
+kind_version=v0.26.0
 host_cluster_ip=172.30.1.2 #host node where Karmada is located
 member_cluster_ip=172.30.2.2
 local_ip=127.0.0.1
@@ -76,14 +76,14 @@ function nginxDeployment() {
             app: nginx
         spec:
           containers:
-          - image: nginx
+          - image: nginx:1.27-alpine
             name: nginx
 EOF
 }
 
 function propagationPolicy() {
     cat << EOF > propagationPolicy.yaml
-    apiVersion: policy.karmada.io/v1alpha1
+    apiVersion: policy.karmada.io/v1beta1
     kind: PropagationPolicy
     metadata:
       name: nginx-propagation  
@@ -134,7 +134,7 @@ ssh -o StrictHostKeyChecking=no root@${member_cluster_ip} "bash ~/createCluster.
 sleep 90
 
 # install karmadactl
-curl -s https://raw.githubusercontent.com/karmada-io/karmada/master/hack/install-cli.sh | sudo bash
+curl -s https://raw.githubusercontent.com/karmada-io/karmada/v1.12.0/hack/install-cli.sh | sudo bash
 
 # init karmada
 karmadactl init
