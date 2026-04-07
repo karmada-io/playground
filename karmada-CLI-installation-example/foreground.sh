@@ -76,10 +76,5 @@ cluster1Config
 cluster2Config
 copyConfigFilesToNode
 
-# create cluster in node01 machine
-ssh -o StrictHostKeyChecking=no root@${member_cluster_ip} "bash ~/installKind.sh" &
-sleep 10
-ssh -o StrictHostKeyChecking=no root@${member_cluster_ip} "bash ~/createCluster.sh"
-
 # clean screen
 clear
