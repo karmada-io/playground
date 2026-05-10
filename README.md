@@ -21,3 +21,4 @@ You can enjoy tutorial experience about Karmada with following platforms.
 ## Contribution
 
 If you know of any excellent online interactive platforms, we welcome any pull requests to adapt the scenarios to the new platform.
+* Try [Workload Affinity and Anti-Affinity Scheduling with Karmada](https://killercoda.com/karmada/scenario/karmada-workload-affinity-example).
