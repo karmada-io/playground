@@ -85,8 +85,9 @@ if kind get clusters 2>/dev/null | grep -q "^karmada-host$"; then
       -p='[{"op":"add","path":"/spec/template/spec/containers/0/command/-","value":"--feature-gates=WorkloadAffinity=true"}]'
 
     kubectl --kubeconfig "$HOST_KUBECONFIG" \
+      kubectl --kubeconfig "$HOST_KUBECONFIG" \
       -n karmada-system rollout status deployment/karmada-scheduler \
-      --timeout=120s || true
+      --timeout=300s
   fi
 fi
 
