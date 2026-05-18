@@ -136,23 +136,5 @@ cd nginx
 nginxDeployment
 propagationPolicy
 
-# create cluster in node01 machine
-ssh -o StrictHostKeyChecking=no root@${member_cluster_ip} "bash ~/installKind.sh" &
-sleep 10
-ssh -o StrictHostKeyChecking=no root@${member_cluster_ip} "bash ~/createCluster.sh" &
-sleep 90
-
-# install karmadactl
-curl -s https://raw.githubusercontent.com/karmada-io/karmada/master/hack/install-cli.sh | sudo bash
-
-# init karmada
-karmadactl init
-
-# join member clusters
-MEMBER_CLUSTER_NAME=kind-member1
-karmadactl --kubeconfig /etc/karmada/karmada-apiserver.config  join ${MEMBER_CLUSTER_NAME} --cluster-kubeconfig=$HOME/.kube/config-member1 --cluster-context=kind-member1
-MEMBER_CLUSTER_NAME=kind-member2
-karmadactl --kubeconfig /etc/karmada/karmada-apiserver.config  join ${MEMBER_CLUSTER_NAME} --cluster-kubeconfig=$HOME/.kube/config-member2 --cluster-context=kind-member2
-
 # clean screen 
 clear
