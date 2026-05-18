@@ -12,7 +12,7 @@ You can enjoy tutorial experience about Karmada with following platforms.
 
 ![killercoda-platform](./images/killercoda-platform.png)
 
-* Try [Installing Karmada on Kubernetes through the Karmada CLI](https://killercoda.com/karmada/scenario/karmada-CLI-installtion-example).
+* Try [Installing Karmada on Kubernetes through the Karmada CLI](https://killercoda.com/karmada/scenario/karmada-CLI-installation-example).
 * Try [Propagate workload through karmada duplicated mode](https://killercoda.com/karmada/scenario/karmada-HA-workload-example1).
 * Try [Propagate workload through karmada divided mode](https://killercoda.com/karmada/scenario/karmada-HA-workload-example2).
 * Try [Simulate multitype cluster failover through Karmada](https://killercoda.com/karmada/scenario/karmada-Failover-example).
