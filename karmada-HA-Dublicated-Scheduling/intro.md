@@ -4,4 +4,4 @@ Karmada (Kubernetes Armada) is a Kubernetes management system that enables you t
 
 Karmada aims to provide turnkey automation for multi-cluster application management in multi-cloud and hybrid cloud scenarios, with key features such as centralized multi-cloud management, high availability, failure recovery, and traffic scheduling.
 
-In this scenario, we'll learn how to deploy workloads across multiple clusters using PropagationPolicy to duplicate the nginx deployment.
+In this scenario, we will deploy an nginx workload through Karmada and use Duplicated scheduling to run an identical copy of the workload on every member cluster.
