@@ -1,21 +1,13 @@
-### create deployment
+### Install karmadactl
 
-display current nginxDeployment.yaml file and propagationPolicy.yaml file
+**Install `karmadactl`:**
 
-RUN ` cat ~/nginx/nginxDeployment.yaml`{{exec}}
+RUN `curl -s https://raw.githubusercontent.com/karmada-io/karmada/master/hack/install-cli.sh | sudo bash`{{exec}}
 
-RUN ` cat ~/nginx/propagationPolicy.yaml`{{exec}}
+This downloads and installs the `karmadactl` CLI tool from the official Karmada repository.
 
-create deployment named nginx
+**Verify installation:**
 
-   RUN `kubectl --kubeconfig /etc/karmada/karmada-apiserver.config apply -f ~/nginx/nginxDeployment.yaml`{{exec}}
+RUN `karmadactl version`{{exec}}
 
-   RUN `kubectl --kubeconfig /etc/karmada/karmada-apiserver.config apply -f ~/nginx/propagationPolicy.yaml`{{exec}}
-
-check deployments and pods and their distribution across member clusters:
-- You should see that the deployment is created and pods are running on both member clusters as per the propagation policy.
-- Their distribution should be: kind-member1: 2 pods, kind-member2: 1 pods.
-
-RUN `karmadactl --kubeconfig /etc/karmada/karmada-apiserver.config get deployment --operation-scope members`{{exec}}
-
-RUN `karmadactl --kubeconfig /etc/karmada/karmada-apiserver.config get pods --operation-scope members`{{exec}}
+This confirms that `karmadactl` is installed correctly and shows the installed version.

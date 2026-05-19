@@ -1,4 +1,6 @@
 #!/bin/bash
 
-kubectl --kubeconfig /etc/karmada/karmada-apiserver.config get cluster kind-member2
+set -e
+
+test -f "$HOME/.kube/config"
 
