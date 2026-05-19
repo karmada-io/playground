@@ -1,12 +1,13 @@
-### Background：
+### Environment overview
 
-1. The kubeconfig files for the host cluster, member1 cluster, and member2 cluster are located in the $HOME/.kube directory. These files are named config, config-member1, and config-member2 respectively.
+The environment consists of two hosts:
 
-   ```shell
-      $HOME/.kube/config
-      $HOME/.kube/config-member1
-      $HOME/.kube/config-member2
-   ```
-2. Check whether the member cluster has been joined
+1. `controlplane`: The host Kubernetes cluster where Karmada runs. The kubeconfig files for the host cluster are located in the `$HOME/.kube` directory.
+2. `node01`: Used to create member clusters.
 
-   RUN `kubectl --kubeconfig /etc/karmada/karmada-apiserver.config get cluster`{{exec}}
+| HostName | Host IP |
+| --- | --- |
+| controlplane | 172.30.1.2 |
+| node01 | 172.30.2.2 |
+
+Note: The current terminal is on the host `controlplane`.
