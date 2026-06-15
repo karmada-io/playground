@@ -1,0 +1,39 @@
+{
+  "title": "Workload Affinity and Anti-Affinity Scheduling in Karmada",
+  "description": "Learn how to co-locate or spread workloads across member clusters using the WorkloadAffinity feature introduced in Karmada v1.17.",
+  "details": {
+    "steps": [
+      {
+        "title": "Verify the Karmada Environment",
+        "text": "step1.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Deploy Workloads with Workload Affinity",
+        "text": "step2.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Deploy Workloads with Workload Anti-Affinity",
+        "text": "step3.md",
+        "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Observe and Inspect Scheduling Decisions",
+        "text": "step4.md",
+        "verify": "step4/verify.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "background.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  },
+  "time": 30
+}
