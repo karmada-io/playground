@@ -16,6 +16,9 @@ You can enjoy tutorial experience about Karmada with following platforms.
 * Try [Propagate workload through karmada duplicated mode](https://killercoda.com/karmada/scenario/karmada-HA-Duplicated-Scheduling).
 * Try [Propagate workload through karmada divided mode](https://killercoda.com/karmada/scenario/karmada-HA-workload-staticweight).
 * Try [Simulate multitype cluster failover through Karmada](https://killercoda.com/karmada/scenario/karmada-Cluster-Failover-example).
+* Try [Simulate Application Failover through Karmada](https://killercoda.com/karmada/scenario/karmada-application-failover-example).
+* Try [FHPA usage using Karmada](https://killercoda.com/karmada/scenario/karmada-FHPA-example).
+* Try [Multi-Component Workload Scheduling in karmada](https://killercoda.com/karmada/scenario/karmada-multi-component-workload-example).
 
 
 ## Contribution
